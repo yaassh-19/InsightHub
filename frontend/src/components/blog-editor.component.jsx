@@ -25,7 +25,7 @@ const BlogEditor = () =>{
     useEffect(()=>{
         if(!textEditor.isReady){
             setTextEditor(new EditorJS({
-                holderId : "textEditor",
+                holder : "textEditor",
                 data : content,
                 tools : tools,
                 placeholder : `Let's write something`,

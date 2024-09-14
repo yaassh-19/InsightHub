@@ -6,6 +6,7 @@ import Header from "@editorjs/header";
 import Quote from "@editorjs/quote";
 import Marker from "@editorjs/marker";
 import InlineCode from "@editorjs/inline-code";
+import NestedList from '@editorjs/nested-list';
 import { uploadImage } from "../common/aws";
 
 const uploadImageByFile = (e) =>{
@@ -62,6 +63,13 @@ export const tools = {
     quote : {
         class :Quote,
         inlineToolbar : true
+    },
+    nestedlist: {
+      class: NestedList,
+      inlineToolbar: true,
+      config: {
+        defaultStyle: 'unordered'
+      },
     },
     marker : Marker,
     inlinecode : InlineCode
